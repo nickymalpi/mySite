@@ -1,31 +1,41 @@
 import SectionContainer from "../layout/SectionContainer";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
+  const [isSuccess, setIsSuccess] = useState();
+  const [isError, setIsError] = useState();
+  const [isLoading, setIsLoading] = useState();
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const form = useRef();
 
-  const sendEmail = (e) => {
-    console.log("submitting");
-    e.preventDefault();
-
+  const sendEmail = () => {
+    setIsLoading(true);
     emailjs
-      .sendForm("service_cie9ubm", "template_wtsxxu9", form.current, {
-        publicKey: "NypSg_-waCJEpEWeg",
-      })
+      .sendForm(
+        process.env.API_PRIVATE_EMAILJS_KEY,
+        process.env.API_TEMPLATE_EMAILJS_KEY,
+        form.current,
+        {
+          publicKey: process.env.API_PUBLIC_EMAILJS_KEY,
+        }
+      )
       .then(
         (data) => {
-          console.log("SUCCESS!", data);
+          setIsSuccess(true);
+          setIsLoading(false);
+          reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setIsError(true);
+          setIsLoading(false);
         }
       );
   };
@@ -163,12 +173,24 @@ const Contact = () => {
                       </li>
                     </ul>
                   </div>
-
+                  <div className="mb-[30px]">
+                    {isSuccess && (
+                      <span className="invalid-feedback">
+                        Message sent successfully! You will hear from me soon!
+                      </span>
+                    )}
+                    {isError && (
+                      <span className="invalid-feedback">
+                        Something went wrong, please send us an email
+                      </span>
+                    )}
+                  </div>
                   <div className="cavani_tm_button">
                     <button
                       type="submit"
                       id="send_message"
                       className="anchorlikebutton"
+                      disabled={isSuccess || isLoading}
                     >
                       Send Message
                     </button>
