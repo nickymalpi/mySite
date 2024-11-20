@@ -29,6 +29,7 @@ const Footer = () => {
                 className="svg inline-block"
                 src="assets/img/svg/social/iconalinkedin.svg"
                 alt="image"
+                
               />
             </a>
           </li>
