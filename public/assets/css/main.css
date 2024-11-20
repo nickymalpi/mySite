@@ -748,8 +748,33 @@ h6 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+.cavani_tm_button .anchorlikebutton {
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 51 51 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
 
 .cavani_tm_button a:hover {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: #b89de6;
+}
+.cavani_tm_button .anchorlikebutton:hover {
   background-color: transparent;
   --tw-text-opacity: 1;
   color: #b89de6;
@@ -1486,6 +1511,12 @@ h6 {
     width: 250px;
   }
 
+  @media screen and (min-width: 1400px) {
+    .logonico {
+      width: 250px;
+    }
+  }
+
   .logonicomobile {
     width: 200px;
     height: auto;
@@ -1595,6 +1626,12 @@ h6 {
     padding-left: 32px;
     padding-right: 32px;
   }
+  .cavani_tm_button .anchorlikebutton {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
   .cavani_tm_section .section_inner {
     padding-left: 50px;
@@ -1613,6 +1650,9 @@ h6 {
   } */
 
 @media (max-width: 1600px) {
+  .logonico {
+    width: 250px !important;
+  }
   .cavani_tm_about .univ ul li .time span {
     padding-top: 3px;
     padding-bottom: 3px;
@@ -2004,6 +2044,12 @@ h6 {
   }
 
   .cavani_tm_button a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .cavani_tm_button .anchorlikebutton {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 28px;
@@ -4720,4 +4766,8 @@ h6 {
   .middle\:hidden {
     display: none;
   }
+}
+
+.invalid-feedback {
+  color: #b89de6;
 }

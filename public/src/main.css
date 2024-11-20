@@ -94,7 +94,13 @@
   .cavani_tm_button a {
     @apply text-white inline-block bg-[#333] px-[38px] py-[13px] border-solid border-[#333] border-2 font-poppins font-medium transition-all duration-300;
   }
+  .cavani_tm_button .anchorlikebutton {
+    @apply text-white inline-block bg-[#333] px-[38px] py-[13px] border-solid border-[#333] border-2 font-poppins font-medium transition-all duration-300;
+  }
   .cavani_tm_button a:hover {
+    @apply bg-transparent text-[#333];
+  }
+  .cavani_tm_button .anchorlikebutton:hover {
     @apply bg-transparent text-[#333];
   }
   .cd-headline.clip .cd-words-wrapper::after {
@@ -371,6 +377,9 @@
   .cavani_tm_button a {
     @apply large:py-[13px] large:px-[32px];
   }
+  .cavani_tm_button .anchorlikebutton {
+    @apply large:py-[13px] large:px-[32px];
+  }
   .cavani_tm_section .section_inner {
     @apply large:px-[50px] large:pt-[95px] large:pb-0;
   }
@@ -545,7 +554,7 @@
   .cavani_tm_home .line {
     @apply small:h-[3px] small:w-[40px];
   }
-  .cavani_tm_button a {
+  .cavani_tm_button .anchorlikebutton {
     @apply small:py-[10px] small:px-[28px];
   }
   /* .circular_progress_bar .list_inner:after {

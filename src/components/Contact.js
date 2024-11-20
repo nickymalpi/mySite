@@ -1,9 +1,41 @@
 import SectionContainer from "../layout/SectionContainer";
 
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    console.log("submitting");
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_cie9ubm", "template_wtsxxu9", form.current, {
+        publicKey: "NypSg_-waCJEpEWeg",
+      })
+      .then(
+        (data) => {
+          console.log("SUCCESS!", data);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
+  const onSubmit = (data, e) => {
+    sendEmail();
+    e.target.reset();
+    console.log("message" + JSON.stringify(data));
+  };
+
   return (
     <SectionContainer navName="contact">
       <div className="section_inner">
@@ -58,8 +90,8 @@ const Contact = () => {
             <div className="left w-1/2 pr-[15px]">
               <div className="fields w-full h-auto clear-both float-left">
                 <form
-                  action="/"
-                  method="post"
+                  ref={form}
+                  onSubmit={handleSubmit(sendEmail)}
                   className="contact_form"
                   id="contact_form"
                 >
@@ -74,33 +106,72 @@ const Contact = () => {
                     <ul>
                       <li className="w-full mb-[30px] float-left">
                         <input
+                          {...register("name", { required: true })}
                           id="name"
+                          name="name"
                           type="text"
                           placeholder="Name"
                           autoComplete="off"
+                          style={{ marginBottom: errors.name ? "10px" : "0px" }}
                         />
+                        {errors.name && errors.name.type === "required" && (
+                          <span className="invalid-feedback">
+                            Name is required
+                          </span>
+                        )}
                       </li>
                       <li className="w-full mb-[30px] float-left">
                         <input
+                          {...register(
+                            "email",
+                            {
+                              required: "Email is Required",
+                              pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message:
+                                  "Entered value does not match email format",
+                              },
+                            },
+                            { required: true }
+                          )}
                           id="email"
                           type="text"
+                          name="email"
                           placeholder="Email"
                           autoComplete="off"
+                          style={{ marginBottom: errors.name ? "10px" : "0px" }}
                         />
+                        {errors.email && (
+                          <span className="invalid-feedback ">
+                            {errors.email.message}
+                          </span>
+                        )}
+                      </li>
+                      <li className="w-full mb-[30px] float-left">
+                        <textarea
+                          {...register("message", { required: true })}
+                          id="message"
+                          name="message"
+                          placeholder="Message"
+                          defaultValue={""}
+                        />
+                        {errors.message && (
+                          <span className="invalid-feedback">
+                            Message is required.
+                          </span>
+                        )}
                       </li>
                     </ul>
                   </div>
-                  <div className="last">
-                    <textarea
-                      id="message"
-                      placeholder="Message"
-                      defaultValue={""}
-                    />
-                  </div>
+
                   <div className="cavani_tm_button">
-                    <a id="send_message" href="#">
+                    <button
+                      type="submit"
+                      id="send_message"
+                      className="anchorlikebutton"
+                    >
                       Send Message
-                    </a>
+                    </button>
                   </div>
                 </form>
               </div>

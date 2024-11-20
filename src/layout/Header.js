@@ -137,6 +137,7 @@ const Header = () => {
               className="inline-block  h-auto logonico"
               src="assets/img/logo/nicolettarossi3.png"
               alt="image"
+              style={{ width: "250px" }}
             />
           </a>
         </div>
