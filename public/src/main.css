@@ -1,0 +1,605 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  ul,
+  li {
+    @apply p-0 m-0;
+  }
+  a {
+    @apply no-underline;
+  }
+  html {
+    @apply overflow-x-hidden p-0 m-0;
+  }
+  body {
+    @apply overflow-x-hidden w-full font-opensans text-[16px] leading-[1.7] tracking-[0px] font-normal bg-[#f6fbff] text-[#7d7789];
+  }
+  svg {
+    @apply fill-[#b89de6] w-[15px] h-[15px];
+  }
+  img.svg {
+    @apply w-[15px] h-[15px] fill-[#b89de6];
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold leading-[1.2] font-poppins text-[#333];
+  }
+  h1 {
+    @apply text-[45px];
+  }
+  h2 {
+    @apply text-[36px];
+  }
+  h3 {
+    @apply text-[30px];
+  }
+  h4 {
+    @apply text-[24px];
+  }
+  h5 {
+    @apply text-[20px];
+  }
+  h6 {
+    @apply text-[16px];
+  }
+  .cavani_tm_all_wrap,
+  .cavani_tm_all_wrap * {
+    @apply box-border;
+  }
+  .cavani_tm_header .menu ul li.mleave.active a {
+    @apply text-[#333];
+  }
+  .cavani_tm_header .menu ul li.active a {
+    @apply text-white;
+  }
+  .cavani_tm_header .menu ul li a:hover {
+    @apply text-white;
+  }
+  .cavani_tm_section {
+    @apply absolute inset-0 overflow-hidden overflow-y-scroll opacity-0 invisible z-[8];
+  }
+  .cavani_tm_section.animated {
+    @apply opacity-100 visible z-[9];
+  }
+  .cavani_tm_section.active {
+    @apply opacity-100 visible z-[10];
+  }
+  .cavani_tm_section.hidden {
+    @apply opacity-0 invisible z-[9];
+  }
+  .cavani_tm_section::-webkit-scrollbar {
+    @apply w-0;
+  }
+  .cavani_tm_section .section_inner {
+    @apply w-full h-auto clear-both float-left relative px-[100px] pt-[92px] pb-[0px];
+  }
+  .cavani_tm_section .section_inner:before {
+    @apply absolute content-[""] top-0 bottom-0 right-0 w-[100px] bg-[#f6fbff];
+  }
+  .cavani_tm_home .job span {
+    @apply text-[#7d7789];
+  }
+  .cavani_tm_home .job b {
+    @apply text-[#333] font-semibold;
+  }
+  .cavani_tm_button {
+    @apply w-full h-auto clear-both float-left;
+  }
+  .cavani_tm_button a {
+    @apply text-white inline-block bg-[#333] px-[38px] py-[13px] border-solid border-[#333] border-2 font-poppins font-medium transition-all duration-300;
+  }
+  .cavani_tm_button a:hover {
+    @apply bg-transparent text-[#333];
+  }
+  .cd-headline.clip .cd-words-wrapper::after {
+    @apply h-[70%] top-1/2 w-[2px] translate-y-[-50%] bg-[#999];
+  }
+  .cd-headline.loading-bar .cd-words-wrapper::after {
+    @apply bg-[#333] h-[2px];
+  }
+  .cavani_tm_title span:after {
+    @apply absolute content-[""] w-[5000px] h-[1px] bg-[#7d7789] left-full top-1/2 translate-y-[-50%] ml-[30px];
+  }
+  .cavani_progress {
+    @apply w-full h-auto clear-both float-left mt-[55px];
+  }
+  .progress_inner {
+    @apply w-full mb-[25px];
+  }
+  .progress_inner:last-child {
+    @apply mb-0;
+  }
+  .progress_inner > span {
+    @apply mb-0 w-full block text-left;
+  }
+  .progress_inner span.number {
+    @apply float-right;
+  }
+  .progress_inner .background {
+    @apply bg-[rgba(0,0,0,.07)] w-full min-w-full relative h-[3px];
+  }
+  .progress_inner .background .bar_in {
+    @apply h-full bg-[#7d7789] w-0 overflow-hidden;
+  }
+  .progress_inner .background .bar {
+    @apply w-0 h-full;
+  }
+  .circular_progress_bar {
+    @apply w-full h-auto clear-both float-left mt-[62px];
+  }
+  .circular_progress_bar ul {
+    @apply ml-[-20px];
+  }
+  .circular_progress_bar ul li {
+    @apply mb-[20px] w-1/3 float-left pl-[20px];
+  }
+  .circular_progress_bar .myCircle {
+    @apply relative float-left;
+  }
+  .circular_progress_bar .list_inner {
+    @apply w-full relative text-center;
+  }
+  .circular_progress_bar .title {
+    @apply w-full max-w-[120px] float-left;
+  }
+  .circular_progress_bar .number {
+    @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
+  }
+  .cavani_tm_about .univ ul:before {
+    @apply content-[""] absolute w-[1px] h-full top-0 left-0 bg-[rgba(0,0,0,.07)];
+  }
+  .cavani_tm_about .univ ul li:before {
+    @apply content-[""] absolute w-[18px] h-[18px] bg-[#f6fbff] rounded-full border-solid border-[#ccc] border left-[-9px] top-[8px];
+  }
+  .cavani_tm_full_link {
+    @apply absolute inset-0 z-[5];
+  }
+  .cavani_tm_about .testimonials .owl-carousel .owl-stage-outer {
+    @apply overflow-hidden;
+  }
+  .cavani_tm_about .testimonials .owl-carousel .owl-stage-outer {
+    @apply overflow-visible;
+  }
+  .cavani_tm_about .testimonials .owl-item.active {
+    @apply opacity-100;
+  }
+  .cavani_tm_about .testimonials .owl-item {
+    @apply opacity-0;
+  }
+  .cavani_tm_portfolio .portfolio_list ul li .details {
+    @apply absolute left-[20px] right-[20px] bottom-0 bg-white z-[3] p-[15px] translate-y-[102%] transition-all duration-300;
+  }
+  .cavani_tm_portfolio .portfolio_list ul li .list_inner:hover .details {
+    @apply translate-y-0 bottom-[20px];
+  }
+  .cavani_tm_modalbox {
+    @apply fixed top-0 left-0 right-0 h-[100vh] z-20 opacity-0 invisible bg-[rgba(0,0,0,.8)] transition-all duration-300;
+  }
+  .cavani_tm_modalbox.opened {
+    @apply opacity-100 visible;
+  }
+  .cavani_tm_modalbox .box_inner {
+    @apply absolute top-[70px] bottom-[70px] w-[968px] left-1/2 translate-x-[-50%] bg-white z-[1] opacity-0 invisible mt-[-20px] transition-all duration-300;
+  }
+  .cavani_tm_modalbox.opened .box_inner {
+    @apply opacity-100 visible mt-0;
+  }
+  .cavani_tm_modalbox .close {
+    @apply fixed left-full top-0 ml-[30px] z-10;
+  }
+  .cavani_tm_modalbox .description_wrap {
+    @apply relative w-full h-full float-left overflow-hidden p-[50px] overflow-y-scroll;
+  }
+  .cavani_tm_modalbox .popup_details .top_image {
+    @apply relative overflow-hidden mb-[37px];
+  }
+  .cavani_tm_modalbox .popup_details .top_image img {
+    @apply relative min-w-full opacity-0;
+  }
+  .cavani_tm_modalbox .popup_details .top_image .main {
+    @apply absolute inset-0 bg-no-repeat bg-cover bg-center;
+  }
+  .cavani_tm_modalbox .portfolio_main_title {
+    @apply w-full float-left mb-[20px];
+  }
+  .dsdcavani_tm_modalbox .portfolio_main_title spands {
+    @apply inline-block;
+  }
+  .cavani_tm_modalbox .portfolio_main_title h3 {
+    @apply font-bold text-[22px] mb-[5px];
+  }
+  .cavani_tm_modalbox .additional_images ul li {
+    @apply w-1/2;
+  }
+  .cavani_tm_modalbox .additional_images ul li:nth-child(3n-2) {
+    @apply w-full;
+  }
+  .cavani_tm_service .service_list ul li .list_inner:hover .svg {
+    @apply text-white;
+  }
+  .cavani_tm_service .service_list ul li .list_inner:hover .title {
+    @apply text-white;
+  }
+  .cavani_tm_service .service_list ul li .list_inner:hover .text {
+    @apply text-[#aaa];
+  }
+  .cavani_tm_modalbox .service_popup_informations .image {
+    @apply w-full float-left relative mb-[37px];
+  }
+  .cavani_tm_modalbox .service_popup_informations .image img {
+    @apply relative min-w-full opacity-0;
+  }
+  .cavani_tm_modalbox .service_popup_informations .image .main {
+    @apply absolute inset-0 bg-no-repeat bg-cover bg-center;
+  }
+  .cavani_tm_modalbox .service_popup_informations .main_title {
+    @apply w-full float-left mb-[23px];
+  }
+  .cavani_tm_modalbox .service_popup_informations .main_title h3 {
+    @apply text-[22px];
+  }
+  .cavani_tm_news .news_list > ul > li .list_inner .details:before {
+    @apply absolute content-[""] top-[-17px] bottom-[-22px] left-0 bg-[#b9b8c3] w-[2px] rotate-[8deg];
+  }
+  .cavani_tm_news .news_list > ul > li .extra_metas ul li:before {
+    @apply relative content-['/'] text-[18px];
+  }
+  .cavani_tm_news .news_list > ul > li .extra_metas ul li:first-child:before {
+    @apply hidden;
+  }
+  .cavani_tm_modalbox .news_popup_informations .image {
+    @apply relative mb-[30px];
+  }
+  .cavani_tm_modalbox .news_popup_informations .image img {
+    @apply relative opacity-0 min-w-full;
+  }
+  .cavani_tm_modalbox .news_popup_informations .image .main {
+    @apply absolute inset-0 bg-no-repeat bg-cover bg-center;
+  }
+  .cavani_tm_modalbox .meta {
+    @apply w-full float-left mb-[5px];
+  }
+  .cavani_tm_modalbox .meta ul {
+    @apply m-0 flex flex-wrap items-center mb-[2px];
+  }
+  .cavani_tm_modalbox .meta ul li {
+    @apply m-0 relative mr-[10px];
+  }
+  .cavani_tm_modalbox .meta ul li:before {
+    @apply relative content-['/'] text-[18px];
+  }
+  .cavani_tm_modalbox .meta ul li:first-child:before {
+    @apply hidden;
+  }
+  .cavani_tm_modalbox .meta ul li span {
+    @apply text-[15px] text-[#777] pl-[10px];
+  }
+  .cavani_tm_modalbox .meta ul li span a {
+    @apply text-[#777] transition-all duration-300;
+  }
+  .cavani_tm_modalbox .meta ul li span a:hover {
+    @apply text-black;
+  }
+  .cavani_tm_modalbox .meta ul li:first-child span {
+    @apply pl-0;
+  }
+  .cavani_tm_modalbox .news_popup_informations .title {
+    @apply w-full float-left mb-[25px];
+  }
+  .cavani_tm_modalbox .news_popup_informations .title h3 {
+    @apply text-[22px];
+  }
+  .cavani_tm_contact .form .empty_notice {
+    @apply text-[#F52225] mb-[7px] hidden text-left font-medium;
+  }
+  .cavani_tm_contact .form .contact_error {
+    @apply text-[#F52225] text-left font-medium;
+  }
+  .cavani_tm_contact .form .returnmessage {
+    @apply text-[#3A00FF] text-left font-medium;
+  }
+
+  /*---------------------------------------------------*/
+  /*	CAVANI MEDIA QUERIES (FOR SMALL DEVICES)
+    /*---------------------------------------------------*/
+
+  /******  Larger  *******/
+
+  body {
+    @apply large:text-[15px];
+  }
+  .cavani_tm_header .logo .text {
+    @apply large:leading-[60px];
+  }
+  .cavani_tm_header .logo img {
+    @apply large:max-w-[95px];
+  }
+  .cavani_tm_mainpart .author_image {
+    @apply large:w-[35%];
+  }
+  .cavani_tm_mainpart .main_content {
+    @apply large:w-[65%];
+  }
+  .cavani_tm_section .section_inner:before {
+    @apply large:w-[50px];
+  }
+  .cavani_tm_title span {
+    @apply large:tracking-[7px];
+  }
+  .cavani_tm_title span:after {
+    @apply large:ml-[25px];
+  }
+  .cavani_tm_header {
+    @apply large:h-[60px] large:leading-[60px] large:py-0 large:px-[60px];
+  }
+  .cavani_tm_footer {
+    @apply large:h-[60px] large:leading-[60px] large:py-0 large:px-[60px];
+  }
+  .cavani_tm_left_border {
+    @apply large:w-[60px];
+  }
+  .cavani_tm_right_border {
+    @apply large:w-[60px];
+  }
+  .cavani_tm_mainpart {
+    @apply large:inset-[60px];
+  }
+  .cavani_tm_footer .social ul li {
+    @apply large:mr-[10px];
+  }
+  .cavani_tm_header .menu ul li a {
+    @apply large:py-0 large:px-[22px];
+  }
+  .cavani_tm_home .content {
+    @apply large:pl-[50px];
+  }
+  .cavani_tm_home .name {
+    @apply large:text-[55px] large:mb-[25px];
+  }
+  .cavani_tm_home .line {
+    @apply large:w-[60px] large:h-[4px] large:mb-[25px];
+  }
+  .cavani_tm_home .job {
+    @apply large:text-[23px] large:mb-[30px];
+  }
+  .cavani_tm_button a {
+    @apply large:py-[13px] large:px-[32px];
+  }
+  .cavani_tm_section .section_inner {
+    @apply large:px-[50px] large:pt-[95px] large:pb-0;
+  }
+  /* .circular_progress_bar .list_inner:after {
+    @apply large:w-[100px] large:h-[100px];
+  } */
+  /* .circular_progress_bar .title {
+    @apply large:max-w-[100px];
+  } */
+  .progress_inner {
+    @apply large:mb-[18px];
+  }
+  .cavani_tm_about .univ ul li .time span {
+    @apply large:py-[3px] large:px-[12px];
+  }
+  .cavani_tm_about .univ ul li .place {
+    @apply large:pl-0;
+  }
+  .cavani_tm_portfolio .portfolio_filter ul li {
+    @apply large:mr-[30px];
+  }
+  .cavani_tm_about .testimonials .list ul li .text {
+    @apply large:p-[30px];
+  }
+  .cavani_tm_contact .short_info ul li .list_inner {
+    @apply large:py-[20px] large:px-[10px];
+  }
+  .cavani_tm_modalbox .box_inner {
+    @apply large:w-[750px] large:top-[45px] large:bottom-[45px];
+  }
+  .cavani_tm_modalbox .description_wrap {
+    @apply large:p-[30px];
+  }
+
+  /******  Middle  *******/
+
+  .mouse-cursor {
+    @apply middle:hidden;
+  }
+  #preloader {
+    @apply middle:hidden;
+  }
+  .cavani_tm_footer {
+    @apply middle:hidden;
+  }
+  .cavani_tm_left_border {
+    @apply middle:hidden;
+  }
+  .cavani_tm_right_border {
+    @apply middle:hidden;
+  }
+  .cavani_tm_section .section_inner:before {
+    @apply middle:w-[20px];
+  }
+  .cavani_tm_mainpart .author_image {
+    @apply middle:hidden;
+  }
+  .cavani_tm_mainpart .main_content {
+    @apply middle:w-full;
+  }
+  .cavani_tm_home .content {
+    @apply middle:py-0 middle:px-[20px];
+  }
+  .cavani_tm_home .name {
+    @apply middle:text-[60px];
+  }
+  .cavani_tm_home .job {
+    @apply middle:text-[22px];
+  }
+  .cavani_tm_about .biography .wrapper {
+    @apply middle:flex-col middle:items-baseline;
+  }
+  .cavani_tm_about .biography .left {
+    @apply middle:w-full middle:mb-[55px];
+  }
+  .cavani_tm_about .biography .right {
+    @apply middle:w-full;
+  }
+  .cavani_tm_about .services .wrapper {
+    @apply middle:flex-col middle:items-center;
+  }
+  .cavani_tm_about .services .service_list {
+    @apply middle:w-full middle:mb-[55px];
+  }
+  .cavani_tm_about .services .service_list:nth-child(2) {
+    @apply middle:w-full;
+  }
+  .cavani_tm_about .services .interests {
+    @apply middle:w-full;
+  }
+  .cavani_tm_section .section_inner {
+    @apply middle:px-[20px] middle:pt-[57px] middle:pb-0;
+  }
+  .cavani_tm_about .skills .wrapper {
+    @apply laptop:flex-col laptop:items-baseline;
+  }
+  .cavani_tm_about .skills .programming {
+    @apply laptop:w-full laptop:mb-[60px];
+  }
+  .cavani_tm_about .skills .language {
+    @apply laptop:w-full;
+  }
+  .circular_progress_bar .title {
+    @apply laptop:float-none;
+  }
+  .cavani_tm_about .resume .wrapper {
+    @apply laptop:flex-col laptop:items-baseline;
+  }
+  .cavani_tm_about .resume .education {
+    @apply middle:w-full middle:mb-[60px];
+  }
+  .cavani_tm_about .resume .experience {
+    @apply middle:w-full;
+  }
+  .cavani_tm_portfolio .portfolio_list ul li {
+    @apply middle:w-1/2;
+  }
+  .cavani_tm_contact .short_info ul {
+    @apply middle:m-0;
+  }
+  .cavani_tm_contact .short_info ul li {
+    @apply middle:w-full middle:pl-0;
+  }
+  .cavani_tm_contact .form {
+    @apply middle:flex-col middle:items-baseline;
+  }
+  .cavani_tm_contact .form .left {
+    @apply middle:w-full middle:p-0 middle:mb-[30px];
+  }
+  .cavani_tm_contact .form .right {
+    @apply middle:w-full middle:p-0;
+  }
+  .cavani_tm_modalbox .box_inner {
+    @apply middle:w-[550px];
+  }
+  .cavani_tm_modalbox .description_wrap {
+    @apply middle:p-[20px];
+  }
+  .cavani_tm_modalbox .main_details {
+    @apply middle:flex-col middle:items-baseline;
+  }
+  .cavani_tm_modalbox .main_details .textbox {
+    @apply middle:w-full middle:p-0 middle:mb-[30px];
+  }
+  .cavani_tm_modalbox .main_details .detailbox {
+    @apply middle:w-full middle:p-0;
+  }
+  .cavani_tm_modalbox .additional_images ul {
+    @apply middle:m-0;
+  }
+  .cavani_tm_modalbox .additional_images ul li {
+    @apply middle:w-full middle:p-0;
+  }
+  .cavani_tm_modalbox .portfolio_main_title h3 {
+    @apply middle:text-[20px];
+  }
+  .cavani_tm_modalbox .news_popup_informations .title h3 {
+    @apply middle:text-[20px];
+  }
+  .cavani_tm_modalbox .service_popup_informations .main_title h3 {
+    @apply middle:text-[20px];
+  }
+
+  /******  Small  *******/
+
+  .cavani_tm_home .name {
+    @apply small:text-[40px];
+  }
+  .cavani_tm_home .job {
+    @apply small:text-[20px];
+  }
+  .cavani_tm_home .line {
+    @apply small:h-[3px] small:w-[40px];
+  }
+  .cavani_tm_button a {
+    @apply small:py-[10px] small:px-[28px];
+  }
+  /* .circular_progress_bar .list_inner:after {
+    @apply small:w-[80px] small:h-[80px];
+  } */
+  .circular_progress_bar .title {
+    @apply small:max-w-[80px];
+  }
+  .cavani_tm_about .partners .list ul li {
+    @apply small:w-1/2;
+  }
+  .cavani_tm_portfolio .portfolio_list ul {
+    @apply small:m-0;
+  }
+  .cavani_tm_portfolio .portfolio_list ul li {
+    @apply small:w-full small:pl-0;
+  }
+  .cavani_tm_title span {
+    @apply small:tracking-[4px];
+  }
+  .cavani_tm_title span:after {
+    @apply small:ml-[15px];
+  }
+  .cavani_tm_modalbox .box_inner {
+    @apply small:w-[300px] small:top-[60px] small:bottom-[40px];
+  }
+  .cavani_tm_modalbox .close {
+    @apply small:ml-[-25px] small:top-[-37px];
+  }
+  .cavani_tm_modalbox .close a {
+    @apply small:w-[28px] small:h-[28px];
+  }
+  .cavani_tm_service .service_list ul {
+    @apply small:m-0;
+  }
+  .cavani_tm_service .service_list ul li {
+    @apply small:w-full small:pl-0 small:mb-[20px];
+  }
+  .cavani_tm_service .service_list ul li .title {
+    @apply small:text-[20px];
+  }
+  .cavani_tm_news .news_list > ul > li .post_title h3 a {
+    @apply small:text-[20px];
+  }
+  .cavani_tm_news .news_list > ul > li .list_inner .number {
+    @apply small:hidden;
+  }
+  .cavani_tm_news .news_list > ul > li .list_inner .details:before {
+    @apply small:hidden;
+  }
+  .cavani_tm_news .news_list > ul > li .list_inner .details {
+    @apply small:m-0 small:p-0 small:max-w-full;
+  }
+  .cavani_tm_news .news_list > ul > li {
+    @apply small:py-[20px] small:px-0;
+  }
+}
