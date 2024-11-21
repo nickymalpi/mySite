@@ -57,7 +57,10 @@ const Header = () => {
       >
         <div className="inner relative w-full h-full text-right px-[20px] pt-[70px] pb-[20px]">
           <div className="wrapper">
-            <div className=" w-[70px] h-[70px] relative float-right mb-[60px]">
+            <div
+              className=" w-[70px] h-[70px] relative float-right mb-[60px]"
+              style={{ width: "120px", height: "120px" }}
+            >
               <div
                 className="image absolute inset-0 bg-no-repeat bg-cover bg-center "
                 data-img-url="assets/img/about/foto-profilo.jpg"
@@ -86,10 +89,7 @@ const Header = () => {
                 ))}
               </ul>
             </div>
-            <div
-              className="social w-full float-left mb-[5px]"
-              
-            >
+            <div className="social w-full float-left mb-[5px]">
               <ul className="mobileicon">
                 <li className="mr-[8px] inline-block">
                   <a
