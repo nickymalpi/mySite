@@ -4771,3 +4771,10 @@ h6 {
 .invalid-feedback {
   color: #b89de6;
 }
+
+.mobileicon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+

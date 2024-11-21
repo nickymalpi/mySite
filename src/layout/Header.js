@@ -63,7 +63,7 @@ const Header = () => {
                 data-img-url="assets/img/about/foto-profilo.jpg"
               />
             </div>
-            <div className="menu_list w-full h-auto clear-both float-left mb-[50px]">
+            <div className="menu_list w-full h-auto clear-both float-left mb-[30px]">
               <ul className="transition_link">
                 {navs.map((nav) => (
                   <li
@@ -86,8 +86,11 @@ const Header = () => {
                 ))}
               </ul>
             </div>
-            <div className="social w-full float-left mb-[5px]">
-              <ul>
+            <div
+              className="social w-full float-left mb-[5px]"
+              
+            >
+              <ul className="mobileicon">
                 <li className="mr-[8px] inline-block">
                   <a
                     className="text-[#333]"
@@ -114,10 +117,21 @@ const Header = () => {
                     />
                   </a>
                 </li>
+                <li className="mr-[8px] inline-block">
+                  <a className="text-[#333]" href="#" target="_blank">
+                    <img
+                      className="svg"
+                      src="assets/img/svg/iconacookies.svg"
+                      alt="image"
+                    />
+                  </a>
+                </li>
               </ul>
             </div>
-            <div className="copyright w-full float-left ">
-              <p className="text-[#333] font-poppins">Copyright © 2023</p>
+            <div className=" copyright w-full float-left ">
+              <p className="text-[#333] font-poppins">
+                Copyright © 2024 Nicoletta Rossi - Tutti i diritti riservati.
+              </p>
             </div>
           </div>
         </div>

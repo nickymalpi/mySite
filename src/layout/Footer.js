@@ -2,7 +2,9 @@ const Footer = () => {
   return (
     <div className="cavani_tm_footer fixed inset-x-0 bottom-0 bg-white z-[10] h-[70px] leading-[70px] flex items-center justify-between py-0 px-[70px] middle:hidden">
       <div className="copyright">
-        <p className="text-[#333] font-poppins">Copyright © 2024</p>
+        <p className="text-[#333] font-poppins">
+          Copyright © 2024 Nicoletta Rossi - Tutti i diritti riservati.
+        </p>
       </div>
       <div className="social">
         <ul>
@@ -29,19 +31,18 @@ const Footer = () => {
                 className="svg inline-block"
                 src="assets/img/svg/social/iconalinkedin.svg"
                 alt="image"
-                
               />
             </a>
           </li>
-          {/* <li className="mr-[15px] inline-block">
-            <a className="text-[#333]" href="#">
+          <li className="inline-block">
+            <a className="text-[#333]" href="#" target="_blank">
               <img
                 className="svg inline-block"
-                src="assets/img/svg/social/iconacookies.svg"
-                alt="policy"
+                src="assets/img/svg/iconacookies.svg"
+                alt="image"
               />
             </a>
-          </li> */}
+          </li>
         </ul>
       </div>
     </div>
